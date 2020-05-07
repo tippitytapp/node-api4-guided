@@ -1,6 +1,6 @@
 module.exports = (req, res, next) => {
     const {authorization} = req.headers;
-    const password = process.env.API_SECRET;
+    const API_SECRET = process.env.API_SECRET;
     if(authorization === API_SECRET){
         next();
     }else{
